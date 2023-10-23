@@ -46,12 +46,16 @@ git checkout test
 git merge top_N
 ```
 
+If I ran the following commands, test and top_N would merge. The process_movie_data.py file in the test branch will change to have the find_top_N function instead of the find_top_5 function.
+
 6. What do you think would happen if you ran the following commands?
 What branches would change, and how?
 ```
 git checkout top_ten
 git merge test
 ```
+
+If I ran the following commands, test and top_ten would merge. The process_movie_data.py file in the top_ten branch will change to have the find_top_5 function instead of the find_top_10 function.
 
 7. What do you think would happen if you ran the following commands?
 What branches would change, and how?
@@ -60,3 +64,5 @@ git checkout test
 git rebase top_ten
 git rebase top_N
 ```
+
+If I ran the following commands, there would be a merge conflict. Git wouldn't know whether it should keep the changes from top_ten or top_N, so I have to manually pick which lines of code to pick.
